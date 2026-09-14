@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/ModelGuard.App/ModelGuard.App.csproj" />
+    <Project Path="src/ModelGuard.Cli/ModelGuard.Cli.csproj" />
+    <Project Path="src/ModelGuard.Core/ModelGuard.Core.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/ModelGuard.Tests/ModelGuard.Tests.csproj" />
+  </Folder>
+</Solution>
