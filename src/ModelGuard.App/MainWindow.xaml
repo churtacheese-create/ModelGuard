@@ -1,0 +1,8 @@
+<Window x:Class="ModelGuard.App.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="ModelGuard" Height="650" Width="1050" Background="#10151D">
+ <Grid Margin="24"><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+  <StackPanel><TextBlock Text="ModelGuard" FontSize="28" FontWeight="SemiBold" Foreground="White"/><TextBlock Text="Local LLM qualification — exact-digest policy" Foreground="#9DB0C8" Margin="0,4,0,18"/></StackPanel>
+  <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,16"><Button Content="Discover Ollama Models" Click="Discover_Click" Padding="16,9" Margin="0,0,10,0"/><Button Content="Qualify Selected" Click="Qualify_Click" Padding="16,9"/><TextBlock x:Name="RootLabel" Foreground="#9DB0C8" VerticalAlignment="Center" Margin="18,0,0,0"/></StackPanel>
+  <DataGrid Grid.Row="2" x:Name="ModelsGrid" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" Background="#17202B" Foreground="White" RowBackground="#17202B" AlternatingRowBackground="#1D2936"><DataGrid.Columns><DataGridTextColumn Header="Model" Binding="{Binding Name}" Width="2*"/><DataGridTextColumn Header="Exact digest" Binding="{Binding Digest}" Width="4*"/><DataGridTextColumn Header="Size" Binding="{Binding Size}" Width="*"/><DataGridTextColumn Header="Qualification" Binding="{Binding Status}" Width="1.5*"/></DataGrid.Columns></DataGrid>
+  <TextBlock Grid.Row="3" x:Name="StatusText" Foreground="#C8D7E8" Margin="0,14,0,0" Text="Ready. No forensic samples will be opened or executed." TextWrapping="Wrap"/>
+ </Grid>
+</Window>
